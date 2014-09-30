@@ -1,0 +1,66 @@
+/*
+ *	CSS file for the landing page.
+ */
+
+/* 
+  Colors 
+  	Blue:
+		500 - #03a9f4
+		50 	- #e1f5fe
+		100 - #b3e5fc
+		900 - #01579b
+	Black:
+		700 - #616161
+ */
+
+ /*
+  Font
+ 	Roboto(see .html)
+
+ 	Weight:
+ 		thin - 100
+ 		light - 300
+ 		normal - 400
+ 		medium - 500
+ */
+
+/* Nav bar */
+h1.landing, .landing {
+	color: #e1f5fe;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+
+	background-color: #3f51b5; 
+}
+
+h4.landing {
+	color: #e1f5fe;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300
+}
+
+/* Body */
+body {
+	padding-top: 98px;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+/* About */
+.about {
+	padding-top: 20px;
+}
+
+h1.about {
+	color: #616161;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;	
+}
+
+p.about {
+	color: #616161;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-align: justify;
+	font-size: 20px;
+}
