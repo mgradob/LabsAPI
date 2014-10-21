@@ -57,7 +57,7 @@ h1.about {
 	font-weight: 300;	
 }
 
-p.about {
+p.about, ul.about {
 	color: #616161;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;

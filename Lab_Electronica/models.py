@@ -23,13 +23,12 @@ class Component(models.Model):
     note = models.CharField(max_length=250, null=True)
     total = models.IntegerField()
     available = models.IntegerField()
-    id_category_fk = models.ForeignKey('Category')
+    id_category_fk = models.ForeignKey(Category, related_name='category')
 
 
 class DetailCart(models.Model):
-    id = models.AutoField(primary_key=True)
-    id_student_fk = models.ForeignKey('Student')
-    id_component_fk = models.ForeignKey('Component')
+    id_student_fk = models.ForeignKey(Student, related_name='student_cart')
+    id_component_fk = models.ForeignKey(Component, related_name='component_cart')
     quantity = models.IntegerField()
     checkout = models.BooleanField()
     ready = models.BooleanField()
@@ -37,9 +36,8 @@ class DetailCart(models.Model):
 
 
 class DetailHistory(models.Model):
-    id = models.AutoField(primary_key=True)
-    id_student_fk = models.ForeignKey('Student')
-    id_component_fk = models.ForeignKey('Component')
+    id_student_fk = models.ForeignKey(Student, related_name='student_history')
+    id_component_fk = models.ForeignKey(Component, related_name='component_history')
     quantity = models.IntegerField()
     date_out = models.DateTimeField()
     date_in = models.DateTimeField()

@@ -16,7 +16,7 @@
 	<!-- Landing page css -->
 	<link rel="stylesheet" href="LabsLandingPage.css">
 	
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,17 +29,26 @@
 	</nav>
 
 	<div class="container-fluid about">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align:center">
+		<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3" style="text-align:center">
 		</div>
 
 		<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6" style="text-align:center">
 
-			<img src="black-android.jpg" alt="Android" class="img-circle" >
-			<h2 class="about">Aplicacion Web y Movil de Pr&eacutestamos</h2>
+			<div class="row">
+				<img src="black-android.jpg" alt="Android" height="150" width="150">
+				<img src="black-apple.jpg" alt="iOS" height="150" width="150">						
+			</div>
+			<h2 class="about">Aplicaciones Web y M&oacutevil de Pr&eacutestamos</h2>
 			
 			<p class="about">
-				El sistema de pr&eacutestamos de los laboratorios del campus se est&aacute actualizando. Este nuevo sistema contar&aacute con servicios en l&iacutenea en donde podr&aacutes consultar el material disponible, tu historial, hacer pedidos y reservar equipo.
-				Contara con una aplicacion en Android y IOS, y tambien podras acceder a estos servicios a traves de la pagina Web.
+				El sistema de pr&eacutestamo de material y equipo en los laboratorios del campus se est&aacute actualizando, el nuevo sistema estar&aacute disponible v&iacutea Web, iOS y Android lo que agilizar&aacute los tr&aacutemites de pr&eacutestamo y entrega de material, y ayudar&aacuten a tener mayor control en la entrega de material. Ser&aacute necesario que sigas los siguientes pasos:
+			</p>
+			<ul class="about">
+				<li>En la p&aacutegina labs.chi.itesm.mx, registrar tu usuario (correo institucional) y contrase&ntildea.</li>
+				<li>Acudir al laboratorio con tu credencial para realizar la validaci&oacuten de tu cuenta.</li>
+			</ul>
+			<p class="about">
+				Con tu cuenta tendr&aacutes acceso a: consultar el material disponible en cada laboratorio, realizar pedidos de material y/o equipo y consultar tu historial.
 			</p>
 
 			<br><br><br>
@@ -47,7 +56,7 @@
 			<h2 class="about">Pedido en l&iacutenea</h2>
 			
 			<p class="about">
-				Podras acceder al Sistema de prestamos donde encontraras los materiales disponibles del Laboratorio de Electronica. Desde ahi, podras agregar componentes a tu lista de pedido y una vez listo podras mandarlo. Se enviara una notificacion al laboratorista, y eligira el material que fue seleccionado y mandara un aviso cuando el pedido este listo para recoger.
+				Una vez localizados los componentes que desees, los puedes agregar a una lista de pedido y terminada tu selecci&oacuten, enviar la solicitud de pr&eacutestamo. El sistema enviar&aacute una notificaci&oacuten al laboratorista para que prepare el material que fue solicitado y te mande un aviso cuando est&eacute listo para que puedas pasar por &eacutel. Es necesario que al pasar por tu material lleves tu credencial para poder registrar tu pedido, sin la credencial no se te podr&aacute entregar el material que solicitaste.
 			</p>
 
 			<br><br><br>
@@ -55,7 +64,7 @@
 			<h2 class="about">Revisar Historial</h2>
 			
 			<p class="about">
-				En la aplicacion podras checar todos los pedidos que haz realizado. Esto permitira que veas el material que tienes actualmente para que no olvides que es lo que falta por entregar. Tambien te muestra cuando entregaste los componentes que pediste anteriormente.
+				Con esta opci&oacuten podr&aacutes revisar la lista de materiales o equipo que has pedido o tienes prestados, te se&ntildealar&aacute que tienes pendientes de entregar y las fechas de solicitud y entrega de material.
 			</p>
 
 			<br><br><br>
@@ -63,39 +72,56 @@
 			<h2 class="about">Reserva de Material</h2>
 			
 			<p class="about">
-				Con el sistema de prestamos del Laboratorio, al completar un pedido se apartaran los componentes por 3 dias. Nadie podra sacar ese material durante ese tiempo. Al pasar los 3 dias, el pedido se borrara y los componentes 
+				Con el nuevo sistema de pr&eacutestamo de laboratorio, al realizar un pedido contar&aacutes con un plazo de 3 d&iacuteas de reservaci&oacuten de material. Si al pasar los 3 d&iacuteas no recogiste tu pedido, se borrar&aacute y tendr&aacutes que realizar de nuevo el proceso de solicitud.
 			</p>
 
 			<p class="about">
-				Estamos solicitando Beta testers, si te interesa mandanos tu matricula. Gracias por participar
+				Estamos solicitando Beta testers, si te interesa m&aacutendanos tu nombre y matr&iacutecula.
 			</p>
 
 
 
-			<form class="form-inline" role="form" action="send.php" method="post">
+			<form class="form-inline" role="form" method="post" id="register">
 			  <br>
 			   <div class="form-group">
 			    <div class="input-group">
-			     
-			      <input class="form-control" name="name" type="text" placeholder="Nombre o Matricula">
+			      <div class="input-group-addon">Nombre</div>			     
+			      <input id="tester-name" class="form-control" name="name" type="text" placeholder="ej: Juan Perez">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <div class="input-group">
-			      <div class="input-group-addon">Email</div>
-			      <input class="form-control" name="email" type="email" placeholder="ej: A00755755@itesm.mx">
+			      <div class="input-group-addon">Matricula</div>
+			      <input id="tester-id" class="form-control" name="matricula" placeholder="ej: A00755755">
 			    </div>
 			  </div>
 			 
-			  <button type="submit" class="btn btn-primary">Enviar <span class="glyphicon glyphicon-envelope"></button>
+			  <button type="submit" class="btn btn-primary">Enviar <span class="glyphicon glyphicon-envelope"/></button>
 			</form>
 			<br>
 		</div>
 	</div>
 	<br>
-</body>
-<footer  style="text-align:center">
-	<p>Mail de Contacto: labs.chih@gmail.com
-	</p>
-</footer>
+	</body>
+
+	<footer  style="text-align:center">
+		<p>Mail de Contacto: labs.chih@gmail.com</p>
+	</footer>
+
+	<script type="text/javascript">
+	$('#register').submit(function(event){
+		var tname = $('#tester-name').val();
+		var tid = $('#tester-id').val();
+
+		$.ajax({
+            url: 'http://labs.chi.itesm.mx:8080/testers/testers/',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                alert("Gracias por registrarte, " + tname);
+            },
+            data: {"name": tname, "id_tester": tid}
+        });
+	});
+	</script>
 </html>

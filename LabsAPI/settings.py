@@ -24,13 +24,6 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ADMINS = (
-    ('Miguel Grado', 'mgradob@gmail.com')
-)
-
-MANAGERS = ADMINS
-
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -40,8 +33,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Lab_Electronica',
     'rest_framework',
+    'Lab_Electronica',
+    'BetaTesters',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,5 +89,6 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
-    'PAGINATE_BY': 10
+    'PAGINATE_BY': 10,
+    'DEFAULT_RENDER_CLASSES':('rest_framework.renderers.JSONRenderer',),
 }

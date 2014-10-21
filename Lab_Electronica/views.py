@@ -1,4 +1,3 @@
-from rest_framework.permissions import IsAuthenticated
 from Lab_Electronica.models import Student, DetailCart, DetailHistory, Component, Category
 from rest_framework import viewsets
 from Lab_Electronica import serializers
@@ -9,7 +8,6 @@ class StudentViewSet(viewsets.ModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
     """
-    permission_classes = (IsAuthenticated,)
     queryset = Student.objects.all()
     serializer_class = serializers.StudentSerializer
 
