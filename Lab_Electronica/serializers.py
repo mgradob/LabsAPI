@@ -5,7 +5,7 @@ from Lab_Electronica.models import Student, DetailCart, DetailHistory, Component
 
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    student = serializers.RelatedField(many=True)
+    student = serializers.HyperlinkedRelatedField(many=True, view_name='Student-detail')
 
     class Meta:
         model = Student
@@ -13,7 +13,7 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class DetailCartSerializer(serializers.HyperlinkedModelSerializer):
-    detail_cart = serializers.RelatedField(many=True)
+    detail_cart = serializers.HyperlinkedRelatedField(many=True, view_name='DetailCart-detail')
 
     class Meta:
         model = DetailCart
@@ -21,7 +21,7 @@ class DetailCartSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class DetailHistorySerializer(serializers.HyperlinkedModelSerializer):
-    detail_history = serializers.RelatedField(many=True)
+    detail_history = serializers.HyperlinkedRelatedField(many=True, view_name='DetailHistory-detail')
 
     class Meta:
         model = DetailHistory
@@ -29,15 +29,15 @@ class DetailHistorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ComponentSerializer(serializers.HyperlinkedModelSerializer):
-    component = serializers.RelatedField(many=True)
+    component = serializers.HyperlinkedRelatedField(many=True, view_name='Component-detail')
 
     class Meta:
         model = Component
-        fields = ('url', 'id_component', 'name', 'note', 'total', 'available', 'id_category_fk')
+        fields = ('url', 'id_category_fk', 'id_component', 'name', 'note', 'total', 'available')
 
 
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
-    category = serializers.RelatedField(many=True)
+    category = serializers.HyperlinkedRelatedField(many=True, view_name='Category-detail')
 
     class Meta:
         model = Category

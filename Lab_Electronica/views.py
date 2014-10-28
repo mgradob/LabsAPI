@@ -1,5 +1,5 @@
 from Lab_Electronica.models import Student, DetailCart, DetailHistory, Component, Category
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from Lab_Electronica import serializers
 
 
