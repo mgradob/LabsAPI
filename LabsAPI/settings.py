@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'Lab_Electronica',
     'BetaTesters',
+    'LabsIndex',
 )
 
 MIDDLEWARE_CLASSES = (
