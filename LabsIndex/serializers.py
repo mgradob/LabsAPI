@@ -1,14 +1,14 @@
 __author__ = 'miguel'
 
-from LabsIndex.models import Links, Student
+from LabsIndex.models import Labs, Student
 from rest_framework import serializers
 
 
-class LinksSerializer(serializers.HyperlinkedModelSerializer):
-    links = serializers.RelatedField(many=True)
+class LabsSerializer(serializers.HyperlinkedModelSerializer):
+    labs = serializers.RelatedField(many=True)
 
     class Meta:
-        model = Links
+        model = Labs
         fields = ('url', 'name', 'link')
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):

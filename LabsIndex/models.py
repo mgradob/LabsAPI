@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Create your models here.
-class Links(models.Model):
+class Labs(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
     link = models.URLField(max_length=500)
     #image = models.ImageField()
@@ -35,7 +35,7 @@ class Student(AbstractBaseUser):
     id_credential = models.IntegerField(max_length=32, null=True)
     career = models.CharField(max_length=5)
     mail = models.EmailField()
-    labs = models.ManyToManyField(Links)
+    labs = models.ManyToManyField(Labs)
 
     USERNAME_FIELD = 'id_student'
 
