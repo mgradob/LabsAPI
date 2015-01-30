@@ -1,15 +1,9 @@
-from Lab_Electronica.models import Student, DetailCart, DetailHistory, Component, Category
+from Lab_Electronica.models import DetailCart, DetailHistory, Component, Category
 from rest_framework import viewsets, generics
 from Lab_Electronica import serializers
 
 
 # Create your views here.
-class StudentViewSet(viewsets.ModelViewSet):
-    """
-     API endpoint tha allows groups to be viewed or edited.
-    """
-    queryset = Student.objects.all()
-    serializer_class = serializers.StudentSerializer
 
 
 class DetailCartViewSet(viewsets.ModelViewSet):
