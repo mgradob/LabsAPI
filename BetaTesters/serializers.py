@@ -5,7 +5,7 @@ from rest_framework import serializers
 
 
 class TesterSerializer(serializers.HyperlinkedModelSerializer):
-    testers = serializers.RelatedField(many=True)
+    testers = serializers.RelatedField(many=True, queryset=Tester.objects.all())
 
     class Meta:
         model = Tester
