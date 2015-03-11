@@ -5,13 +5,13 @@ from rest_framework import serializers
 
 
 class LabsSerializer(serializers.HyperlinkedModelSerializer):
-    name = serializers.ReadOnlyField()
+    labs = serializers.HyperlinkedRelatedField(many=True, view_name ='labs-detail')
     class Meta:
         model = Labs
         fields = ('url', 'name', 'link')
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    labs = serializers.HyperlinkedRelatedField(many=True, view_name='labs-detail', queryset=Labs.objects.all())
+    student = serializers.HyperlinkedRelatedField(many=True, view_name='student-detail', queryset=Labs.objects.all())
 
     class Meta:
         model = Student
