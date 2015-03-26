@@ -1,19 +1,12 @@
 __author__ = 'miguel'
 
 from rest_framework import serializers
-from Lab_Electronica.models import Student, DetailCart, DetailHistory, Component, Category
+from Lab_Electronica.models import DetailCart, DetailHistory, Component, Category
 
-
-class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    student = serializers.HyperlinkedRelatedField(many=True, view_name='Student-detail')
-
-    class Meta:
-        model = Student
-        fields = ('url', 'id_student', 'name', 'last_name_1', 'last_name_2', 'id_credential', 'career', 'mail')
 
 
 class DetailCartSerializer(serializers.HyperlinkedModelSerializer):
-    detail_cart = serializers.HyperlinkedRelatedField(many=True, view_name='DetailCart-detail')
+    detail_cart = serializers.HyperlinkedRelatedField(many=True, view_name='DetailCart-detail', queryset=DetailCart.objects.all())
 
     class Meta:
         model = DetailCart
@@ -21,7 +14,7 @@ class DetailCartSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class DetailHistorySerializer(serializers.HyperlinkedModelSerializer):
-    detail_history = serializers.HyperlinkedRelatedField(many=True, view_name='DetailHistory-detail')
+    detail_history = serializers.HyperlinkedRelatedField(many=True, view_name='DetailHistory-detail', queryset=DetailHistory.objects.all())
 
     class Meta:
         model = DetailHistory
@@ -29,7 +22,7 @@ class DetailHistorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ComponentSerializer(serializers.HyperlinkedModelSerializer):
-    component = serializers.HyperlinkedRelatedField(many=True, view_name='Component-detail')
+    component = serializers.HyperlinkedRelatedField(many=True, view_name='Component-detail', queryset=Component.objects.all())
 
     class Meta:
         model = Component
@@ -37,7 +30,7 @@ class ComponentSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
-    category = serializers.HyperlinkedRelatedField(many=True, view_name='Category-detail')
+    category = serializers.HyperlinkedRelatedField(many=True, view_name='Category-detail', queryset=Category.objects.all())
 
     class Meta:
         model = Category

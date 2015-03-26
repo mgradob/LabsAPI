@@ -1,15 +1,5 @@
 from django.db import models
-
-
-class Student(models.Model):
-    id_student = models.CharField(max_length=10, primary_key=True)
-    name = models.CharField(max_length=50)
-    last_name_1 = models.CharField(max_length=50)
-    last_name_2 = models.CharField(max_length=50)
-    id_credential = models.IntegerField(max_length=32, null=True)
-    career = models.CharField(max_length=5)
-    mail = models.EmailField()
-
+from LabsIndex.models import Student
 
 class Category(models.Model):
     id_category = models.IntegerField(primary_key=True)
@@ -30,8 +20,8 @@ class DetailCart(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_cart')
     id_component_fk = models.ForeignKey(Component, related_name='component_cart')
     quantity = models.IntegerField()
-    checkout = models.BooleanField()
-    ready = models.BooleanField()
+    checkout = models.BooleanField(default=False)
+    ready = models.BooleanField(default=False)
     date_checkout = models.DateTimeField()
 
 
