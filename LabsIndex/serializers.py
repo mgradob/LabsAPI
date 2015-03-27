@@ -11,7 +11,7 @@ class LabsSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('url', 'name', 'link')
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    labs = serializers.HyperlinkedRelatedField(many=True, view_name='student-detail', queryset=Labs.objects.all())
+    labs = serializers.HyperlinkedRelatedField(many=True, view_name='labs-detail', queryset=Labs.objects.all())
 
     class Meta:
         model = Student
