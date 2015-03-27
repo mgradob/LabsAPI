@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Create your models here.
 class Labs(models.Model):
+    url = models.URLField(max_length=500)
     name = models.CharField(max_length=100, primary_key=True)
     link = models.URLField(max_length=500)
     #image = models.ImageField()
