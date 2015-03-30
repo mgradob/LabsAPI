@@ -6,6 +6,8 @@ class Category(models.Model):
     name = models.CharField(max_length=50)
     #image = models.ImageField()
 
+    def __unicode__(self):
+        return self.name
 
 class Component(models.Model):
     id_component = models.IntegerField(primary_key=True)
@@ -15,6 +17,8 @@ class Component(models.Model):
     available = models.IntegerField()
     id_category_fk = models.ForeignKey(Category, related_name='category')
 
+    def __unicode__(self):
+        return self.name
 
 class DetailCart(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_cart')
@@ -23,6 +27,7 @@ class DetailCart(models.Model):
     checkout = models.BooleanField(default=False)
     ready = models.BooleanField(default=False)
     date_checkout = models.DateTimeField()
+
 
 
 class DetailHistory(models.Model):
