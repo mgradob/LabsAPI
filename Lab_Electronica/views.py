@@ -3,42 +3,6 @@ from rest_framework import viewsets, generics
 from Lab_Electronica import serializers
 import django_filters
 
-# Create your views here.
-
-
-class DetailCartViewSet(viewsets.ModelViewSet):
-    """
-     API endpoint tha allows groups to be viewed or edited.
-    """
-    queryset = DetailCart.objects.all()
-    serializer_class = serializers.DetailCartSerializer
-
-
-class DetailHistoryViewSet(viewsets.ModelViewSet):
-    """
-     API endpoint tha allows groups to be viewed or edited.
-    """
-    queryset = DetailHistory.objects.all()
-    serializer_class = serializers.DetailHistorySerializer
-
-
-class ComponentViewSet(viewsets.ModelViewSet):
-    """
-     API endpoint tha allows groups to be viewed or edited.
-    """
-    queryset = Component.objects.all()
-    serializer_class = serializers.ComponentSerializer
-
-
-class CategoryViewSet(viewsets.ModelViewSet):
-    """
-     API endpoint tha allows groups to be viewed or edited.
-    """
-    queryset = Category.objects.all()
-    serializer_class = serializers.CategorySerializer
-
-#FilterSets
-
 class ComponentFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(name='name', lookup_type='startswith')
     class Meta:
@@ -65,3 +29,37 @@ class DetailCartFilter(django_filters.FilterSet):
         model = DetailCart
         fields = ['id_student_fk', 'id_component_fk', 'quantity', 'checkout',
                   'ready', 'date_checkout']
+# Create your views here.
+
+
+class DetailCartViewSet(viewsets.ModelViewSet):
+    """
+     API endpoint tha allows groups to be viewed or edited.
+    """
+    queryset = DetailCart.objects.all()
+    serializer_class = serializers.DetailCartSerializer
+    filter_class = DetailCartFilter
+
+class DetailHistoryViewSet(viewsets.ModelViewSet):
+    """
+     API endpoint tha allows groups to be viewed or edited.
+    """
+    queryset = DetailHistory.objects.all()
+    serializer_class = serializers.DetailHistorySerializer
+    filter_class = DetailHistoryFilter
+
+class ComponentViewSet(viewsets.ModelViewSet):
+    """
+     API endpoint tha allows groups to be viewed or edited.
+    """
+    queryset = Component.objects.all()
+    serializer_class = serializers.ComponentSerializer
+    filter_class = ComponentFilter
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    """
+     API endpoint tha allows groups to be viewed or edited.
+    """
+    queryset = Category.objects.all()
+    serializer_class = serializers.CategorySerializer
+    filter_class = CategoryFilter
