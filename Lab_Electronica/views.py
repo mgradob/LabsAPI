@@ -4,7 +4,7 @@ from Lab_Electronica import serializers
 import django_filters
 
 class ComponentFilter(django_filters.FilterSet):
-    name = django_filters.CharFilter(name='name', lookup_type='startswith')
+    name = django_filters.CharFilter(name='name', lookup_type='exact')
     class Meta:
         model = Component
         fields = ['id_category_fk', 'id_component', 'name', 'note', 'total',
