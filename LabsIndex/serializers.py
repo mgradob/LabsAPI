@@ -1,6 +1,6 @@
 __author__ = 'miguel'
 
-from LabsIndex.models import Labs, Student
+from LabsIndex.models import Labs, Student, Administrator
 from rest_framework import serializers
 
 
@@ -17,3 +17,11 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
         model = Student
         fields = ('url', 'id_student', 'name', 'last_name_1',
                   'last_name_2', 'id_credential', 'career', 'mail', 'labs')
+
+class AdministratorSerializer(serializers.HyperlinkedModelSerializer):
+    labs = serializers.HyperlinkedRelatedField(many=True, view_name='labs-detail', queryset=Labs.objects.all())
+
+    class Meta:
+        model = Administrator
+        fields = ('url', 'id_administrator', 'name', 'last_name_1',
+                  'last_name_2', 'mail', 'labs')

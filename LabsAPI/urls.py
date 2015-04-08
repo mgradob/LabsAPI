@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from rest_framework import routers
 from Lab_Electronica.views import  DetailCartViewSet, DetailHistoryViewSet, ComponentViewSet, CategoryViewSet
 from BetaTesters.views import TestersViewSet
-from LabsIndex.views import LabsViewSet, StudentViewSet
+from LabsIndex.views import LabsViewSet, StudentViewSet, AdministratorViewSet
 
 lab_electronica_router = routers.DefaultRouter()
 lab_electronica_router.register(r'detailcart', DetailCartViewSet)
@@ -16,6 +16,7 @@ testers_router.register(r'testers', TestersViewSet)
 index_router = routers.DefaultRouter()
 index_router.register(r'labs', LabsViewSet)
 index_router.register(r'students', StudentViewSet)
+index_router.register(r'admins', AdministratorViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.

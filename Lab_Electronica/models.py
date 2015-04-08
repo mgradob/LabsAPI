@@ -26,7 +26,7 @@ class DetailCart(models.Model):
     quantity = models.IntegerField()
     checkout = models.BooleanField(default=False)
     ready = models.BooleanField(default=False)
-    date_checkout = models.DateTimeField()
+    date_checkout = models.DateTimeField(null=True)
 
 
 class DetailHistory(models.Model):
@@ -34,4 +34,4 @@ class DetailHistory(models.Model):
     id_component_fk = models.ForeignKey(Component, related_name='component_history')
     quantity = models.IntegerField()
     date_out = models.DateTimeField()
-    date_in = models.DateTimeField()
+    date_in = models.DateTimeField(null=True)

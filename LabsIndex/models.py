@@ -43,3 +43,32 @@ class Student(AbstractBaseUser):
 
     def __unicode__(self):
         return self.id_student
+
+class AdministratorManager(BaseUserManager):
+    def create_admin(self, id_administrator,
+                    password=None):
+        administrator = self.model(id_administrator=id_administrator,)
+        return administrator
+
+    def create_superuser(self, id_administrator,
+                         password):
+        administrator = self.create_admin(id_administrator,
+                                password=password)
+        administrator.is_team_player = True
+        administrator.save()
+        return administrator
+
+class Administrator(AbstractBaseUser):
+    id_administrator = models.CharField(max_length=10, unique=True, primary_key=True)
+    name = models.CharField(max_length=50)
+    last_name_1 = models.CharField(max_length=50)
+    last_name_2 = models.CharField(max_length=50)
+    mail = models.EmailField()
+    labs = models.ManyToManyField(Labs)
+
+    USERNAME_FIELD = 'id_administrator'
+
+    REQUIRED_FIELDS = ['name', 'last_name_1', 'last_name_2', 'mail']
+
+    def __unicode__(self):
+        return self.id_administrator
