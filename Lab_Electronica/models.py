@@ -29,6 +29,8 @@ class DetailCart(models.Model):
     date_checkout = models.DateTimeField(null=True)
     id_cart = models.AutoField(primary_key=True)
 
+    def __unicode(self):
+        return str(self.id_cart)
 
 class DetailHistory(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_history')
@@ -37,3 +39,6 @@ class DetailHistory(models.Model):
     date_out = models.DateTimeField()
     date_in = models.DateTimeField(null=True)
     id_history = models.AutoField(primary_key=True)
+
+    def __unicode__(self):
+        return str(self.id_history)
