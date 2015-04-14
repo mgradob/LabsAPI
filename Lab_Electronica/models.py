@@ -27,6 +27,7 @@ class DetailCart(models.Model):
     checkout = models.BooleanField(default=False)
     ready = models.BooleanField(default=False)
     date_checkout = models.DateTimeField(null=True)
+    id_cart = models.AutoField(primary_key=True)
 
 
 class DetailHistory(models.Model):
@@ -35,3 +36,4 @@ class DetailHistory(models.Model):
     quantity = models.IntegerField()
     date_out = models.DateTimeField()
     date_in = models.DateTimeField(null=True)
+    id_history = models.AutoField(primary_key=True)
