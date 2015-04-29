@@ -8,7 +8,7 @@ class DetailCartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DetailCart
-        fields = ('id_cart', 'id_student_fk', 'id_component_fk', 'quantity', 'checkout', 'ready', 'date_checkout')
+        fields = ( 'id_student_fk', 'id_component_fk', 'quantity', 'checkout', 'ready', 'date_checkout')
 
 
 class DetailHistorySerializer(serializers.ModelSerializer):
@@ -16,7 +16,7 @@ class DetailHistorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DetailHistory
-        fields = ('id_history', 'id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
+        fields = ( 'id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
 
 
 class ComponentSerializer(serializers.ModelSerializer):
