@@ -3,8 +3,6 @@ __author__ = 'miguel'
 from rest_framework import serializers
 from Lab_Electronica.models import DetailCart, DetailHistory, Component, Category
 
-
-
 class DetailCartSerializer(serializers.ModelSerializer):
     #detail_cart = serializers.HyperlinkedRelatedField(many=True, view_name='DetailCart-detail', queryset=DetailCart.objects.all())
 
@@ -18,11 +16,7 @@ class DetailHistorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DetailHistory
-<<<<<<< HEAD
-        fields = ('id_history','id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
-=======
         fields = ('id_history', 'id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
->>>>>>> parent of 812b2f4... fixed unicode methods and serializers for DetailCart, DetailHistory
 
 
 class ComponentSerializer(serializers.ModelSerializer):
