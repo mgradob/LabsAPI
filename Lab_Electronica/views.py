@@ -21,14 +21,14 @@ class DetailHistoryFilter(django_filters.FilterSet):
     class Meta:
         model = DetailHistory
         fields = ['id_student_fk', 'id_component_fk', 'quantity', 'date_out',
-                  'date_in','id_history']
+                  'date_in']
 
 class DetailCartFilter(django_filters.FilterSet):
 
     class Meta:
         model = DetailCart
         fields = ['id_student_fk', 'id_component_fk', 'quantity', 'checkout',
-                  'ready', 'date_checkout','id_cart']
+                  'ready', 'date_checkout']
 # Create your views here.
 
 
