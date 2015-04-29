@@ -40,6 +40,9 @@ class DetailCartViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.DetailCartSerializer
     filter_class = DetailCartFilter
 
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
 class DetailHistoryViewSet(viewsets.ModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
