@@ -5,18 +5,18 @@ from Lab_Electronica.models import DetailCart, DetailHistory, Component, Categor
 
 class DetailCartSerializer(serializers.ModelSerializer):
     #detail_cart = serializers.HyperlinkedRelatedField(many=True, view_name='DetailCart-detail', queryset=DetailCart.objects.all())
-
+    #id_cart = serializers.IntegerField()
     class Meta:
         model = DetailCart
-        fields = ( 'id_student_fk', 'id_component_fk', 'quantity', 'checkout', 'ready', 'date_checkout')
+        fields = ('id_student_fk', 'id_component_fk', 'quantity', 'checkout', 'ready', 'date_checkout',)
 
 
 class DetailHistorySerializer(serializers.ModelSerializer):
     #detail_history = serializers.HyperlinkedRelatedField(many=True, view_name='DetailHistory-detail', queryset=DetailHistory.objects.all())
-
+    #id_history = serializers.IntegerField()
     class Meta:
         model = DetailHistory
-        fields = ( 'id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
+        fields = ('id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
 
 
 class ComponentSerializer(serializers.ModelSerializer):
@@ -33,3 +33,4 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ('id_category', 'name')
+
