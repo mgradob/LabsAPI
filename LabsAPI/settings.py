@@ -39,7 +39,6 @@ INSTALLED_APPS = (
     'Lab_Electronica',
     'BetaTesters',
     'LabsIndex',
-    'south'
 )
 
 MIDDLEWARE_CLASSES = (

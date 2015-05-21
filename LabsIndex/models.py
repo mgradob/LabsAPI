@@ -32,11 +32,10 @@ class Student(AbstractBaseUser):
     name = models.CharField(max_length=50)
     last_name_1 = models.CharField(max_length=50)
     last_name_2 = models.CharField(max_length=50)
-    id_credential = models.IntegerField(max_length=32, null=True)
+    id_credential = models.IntegerField(null=True)
     career = models.CharField(max_length=5)
     mail = models.EmailField()
     labs = models.ManyToManyField(Labs)
-
     USERNAME_FIELD = 'id_student'
 
     REQUIRED_FIELDS = ['name', 'last_name_1', 'id_credential', 'career', 'mail']

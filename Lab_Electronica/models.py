@@ -27,16 +27,18 @@ class DetailCart(models.Model):
     checkout = models.BooleanField(default=False)
     ready = models.BooleanField(default=False)
     date_checkout = models.DateTimeField(blank=True,null=True)
-    #id_cart = models.AutoField(primary_key=True)
-
+    id_cart = models.AutoField(primary_key=True)
+    
+    def __unicode__(self):
+        return str(self.id_cart)
 
 class DetailHistory(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_history')
     id_component_fk = models.ForeignKey(Component, related_name='component_history')
     quantity = models.IntegerField()
     date_out = models.DateTimeField()
-    date_in = models.DateTimeField(null=True,blank=True,default='2000-00-00T00:00:00Z')
-    #id_history = models.AutoField(primary_key=True)
+    date_in = models.DateTimeField(null=True,blank=True)
+    id_history = models.AutoField(primary_key=True)
 
     def __unicode__(self):
         return str(self.id_history)

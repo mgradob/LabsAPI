@@ -1,0 +1,555 @@
+[
+{
+  "pk": 1, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "logentry", 
+    "name": "log entry", 
+    "app_label": "admin"
+  }
+},
+{
+  "pk": 2, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "permission", 
+    "name": "permission", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 3, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "group", 
+    "name": "group", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 4, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "user", 
+    "name": "user", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 5, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "contenttype", 
+    "name": "content type", 
+    "app_label": "contenttypes"
+  }
+},
+{
+  "pk": 6, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "session", 
+    "name": "session", 
+    "app_label": "sessions"
+  }
+},
+{
+  "pk": 7, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "category", 
+    "name": "category", 
+    "app_label": "Lab_Electronica"
+  }
+},
+{
+  "pk": 8, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "component", 
+    "name": "component", 
+    "app_label": "Lab_Electronica"
+  }
+},
+{
+  "pk": 9, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "detailcart", 
+    "name": "detail cart", 
+    "app_label": "Lab_Electronica"
+  }
+},
+{
+  "pk": 10, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "detailhistory", 
+    "name": "detail history", 
+    "app_label": "Lab_Electronica"
+  }
+},
+{
+  "pk": 11, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "tester", 
+    "name": "tester", 
+    "app_label": "BetaTesters"
+  }
+},
+{
+  "pk": 12, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "labs", 
+    "name": "labs", 
+    "app_label": "LabsIndex"
+  }
+},
+{
+  "pk": 13, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "student", 
+    "name": "student", 
+    "app_label": "LabsIndex"
+  }
+},
+{
+  "pk": 14, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "administrator", 
+    "name": "administrator", 
+    "app_label": "LabsIndex"
+  }
+},
+{
+  "pk": 15, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "migrationhistory", 
+    "name": "migration history", 
+    "app_label": "south"
+  }
+},
+{
+  "pk": "0yps9palkppx9vfjof3qh4upimoddjdv", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-11T06:56:30.228Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": "agx1gr337eyy34oxr40ibgmmf2fijwca", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-20T23:09:35.840Z", 
+    "session_data": "MGE3OTQ0ZWFlYjljMGYzOWE2MzdkOGYyMjFjMjJlZDY2NThkOTU5YTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+  }
+},
+{
+  "pk": "bwz1suttlpshj8jtvwogbllv3rsyhk6u", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-11T06:56:29.153Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": "caoy0cy045v38fcoqo28m4goqncgepl7", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-10T22:49:55.253Z", 
+    "session_data": "MGE3OTQ0ZWFlYjljMGYzOWE2MzdkOGYyMjFjMjJlZDY2NThkOTU5YTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+  }
+},
+{
+  "pk": "g5ajag08zl1oa56fioggg81x351qk6ln", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-10T22:50:27.340Z", 
+    "session_data": "MGE3OTQ0ZWFlYjljMGYzOWE2MzdkOGYyMjFjMjJlZDY2NThkOTU5YTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+  }
+},
+{
+  "pk": "lzge1df73ooftrh96622dvzlej9p3ss3", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-05-13T16:33:48.694Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": "ooceboiyakc9uevipndvoa9j7yzgwv3t", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-13T07:33:28.182Z", 
+    "session_data": "MGE3OTQ0ZWFlYjljMGYzOWE2MzdkOGYyMjFjMjJlZDY2NThkOTU5YTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+  }
+},
+{
+  "pk": "pdhcqfp0uu0p6w5pkqnpt1tt60w5mfpj", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-04-11T06:56:40.601Z", 
+    "session_data": "MGE3OTQ0ZWFlYjljMGYzOWE2MzdkOGYyMjFjMjJlZDY2NThkOTU5YTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+  }
+},
+{
+  "pk": "tno7s1lvrg3mgrw083a17m1phvxz7vds", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-05-13T16:46:56.753Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": "u5is6tw5pjrqzcvmfcplsv4jscilzpme", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-05-13T16:33:52.276Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": "xhskcl44lagkhtqly0ssrjz0lzjajzhv", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2015-05-13T16:33:49.795Z", 
+    "session_data": "MWM1ZjViNTFlMGZlZjU0YmEzZGJiMDE0OWQ5ZmYzYWQwYzlkZTdkZjp7fQ=="
+  }
+},
+{
+  "pk": 0, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Resistencias"
+  }
+},
+{
+  "pk": 1, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Capacitores"
+  }
+},
+{
+  "pk": 2, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Equipo"
+  }
+},
+{
+  "pk": 3, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Kits"
+  }
+},
+{
+  "pk": 4, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Cables"
+  }
+},
+{
+  "pk": 5, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Circuitos Integrados"
+  }
+},
+{
+  "pk": 6, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Diodos"
+  }
+},
+{
+  "pk": 7, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Herramientas"
+  }
+},
+{
+  "pk": 8, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Switches"
+  }
+},
+{
+  "pk": 9, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Adaptadores"
+  }
+},
+{
+  "pk": 10, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Displays"
+  }
+},
+{
+  "pk": 11, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Inductores"
+  }
+},
+{
+  "pk": 12, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Sensores"
+  }
+},
+{
+  "pk": 13, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Motores"
+  }
+},
+{
+  "pk": 14, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Potenciometros"
+  }
+},
+{
+  "pk": 15, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Transformadores"
+  }
+},
+{
+  "pk": 16, 
+  "model": "Lab_Electronica.category", 
+  "fields": {
+    "name": "Transistores"
+  }
+},
+{
+  "pk": 0, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Ohm", 
+    "available": 10, 
+    "id_category_fk": 0, 
+    "total": 10, 
+    "name": "1"
+  }
+},
+{
+  "pk": 1, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Ohm", 
+    "available": 10, 
+    "id_category_fk": 0, 
+    "total": 10, 
+    "name": "10"
+  }
+},
+{
+  "pk": 2, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Ohm", 
+    "available": 10, 
+    "id_category_fk": 0, 
+    "total": 10, 
+    "name": "100"
+  }
+},
+{
+  "pk": 1001, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Electrol\u00edtico", 
+    "available": 10, 
+    "id_category_fk": 1, 
+    "total": 10, 
+    "name": "1uF"
+  }
+},
+{
+  "pk": 1002, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Electrol\u00edtico", 
+    "available": 10, 
+    "id_category_fk": 1, 
+    "total": 10, 
+    "name": "10uF"
+  }
+},
+{
+  "pk": 1003, 
+  "model": "Lab_Electronica.component", 
+  "fields": {
+    "note": "Electrol\u00edtico", 
+    "available": 10, 
+    "id_category_fk": 1, 
+    "total": 10, 
+    "name": "100uF"
+  }
+},
+{
+  "pk": "Electronica", 
+  "model": "LabsIndex.labs", 
+  "fields": {
+    "link": "http://labs.chi.itesm.mx:8080/elec"
+  }
+},
+{
+  "pk": "A00758435", 
+  "model": "LabsIndex.student", 
+  "fields": {
+    "name": "Miguel", 
+    "career": "ITE", 
+    "id_credential": 123456789, 
+    "labs": [
+      "Electronica"
+    ], 
+    "last_login": "2015-03-28T07:12:29.771Z", 
+    "mail": "A00758435@itesm.mx", 
+    "last_name_1": "Grado", 
+    "last_name_2": "Bayl\u00f3n", 
+    "password": ""
+  }
+},
+{
+  "pk": "A01560365", 
+  "model": "LabsIndex.student", 
+  "fields": {
+    "name": "Alejandro", 
+    "career": "ITIC", 
+    "id_credential": 3838822894, 
+    "labs": [
+      "Electronica"
+    ], 
+    "last_login": "2015-03-27T22:51:28.813Z", 
+    "mail": "ardzoht@gmail.com", 
+    "last_name_1": "Rodriguez", 
+    "last_name_2": "Aragonez", 
+    "password": ""
+  }
+},
+{
+  "pk": "L03036921", 
+  "model": "LabsIndex.administrator", 
+  "fields": {
+    "name": "Miguel", 
+    "labs": [
+      "Electronica"
+    ], 
+    "last_login": "2015-04-08T16:25:01.900Z", 
+    "mail": "miguel.grado@itesm.mx", 
+    "last_name_1": "Grado", 
+    "last_name_2": "Bayl\u00f3n", 
+    "password": ""
+  }
+},
+{
+  "pk": 1, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-08T16:22:25.138Z", 
+    "app_name": "django_extensions", 
+    "migration": "0001_empty"
+  }
+},
+{
+  "pk": 2, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.243Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0001_initial"
+  }
+},
+{
+  "pk": 3, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.422Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0002_initial"
+  }
+},
+{
+  "pk": 4, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.573Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0003_auto__del_field_detailhistory_id__add_field_detailhistory_id_history__"
+  }
+},
+{
+  "pk": 5, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.724Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0004_auto__chg_field_detailhistory_id_history__chg_field_detailcart_id_cart"
+  }
+},
+{
+  "pk": 6, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.858Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0005_auto__del_field_detailcart_id_cart__add_field_detailcart_id"
+  }
+},
+{
+  "pk": 7, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:33.992Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0006_auto__del_field_detailcart_id__add_field_detailcart_id_cart"
+  }
+},
+{
+  "pk": 8, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:34.143Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0007_auto__del_field_detailhistory_id_history__add_field_detailhistory_id"
+  }
+},
+{
+  "pk": 9, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:34.294Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0008_auto__del_field_detailhistory_id__add_field_detailhistory_id_history"
+  }
+},
+{
+  "pk": 10, 
+  "model": "south.migrationhistory", 
+  "fields": {
+    "applied": "2015-04-29T16:37:34.429Z", 
+    "app_name": "Lab_Electronica", 
+    "migration": "0009_auto__chg_field_detailhistory_id_history__chg_field_detailcart_id_cart"
+  }
+}
