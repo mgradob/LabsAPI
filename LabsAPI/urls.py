@@ -10,9 +10,6 @@ lab_electronica_router.register(r'detailhistory', DetailHistoryViewSet)
 lab_electronica_router.register(r'component', ComponentViewSet)
 lab_electronica_router.register(r'category', CategoryViewSet)
 
-testers_router = routers.DefaultRouter()
-testers_router.register(r'testers', TestersViewSet)
-
 index_router = routers.DefaultRouter()
 index_router.register(r'labs', LabsViewSet)
 index_router.register(r'students', StudentViewSet)
