@@ -36,7 +36,7 @@ class DetailCartViewSet(viewsets.ModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
     """
-    queryset = DetailCart.objects.all()
+    queryset = DetailCart.objects.filter(id_student_fk__labs__name='Electronica')
     serializer_class = serializers.DetailCartSerializer
     filter_class = DetailCartFilter
 
@@ -47,7 +47,7 @@ class DetailHistoryViewSet(viewsets.ModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
     """
-    queryset = DetailHistory.objects.all()
+    queryset = DetailHistory.objects.filter(id_student_fk__labs__name='Electronica')
     serializer_class = serializers.DetailHistorySerializer
     filter_class = DetailHistoryFilter
 
