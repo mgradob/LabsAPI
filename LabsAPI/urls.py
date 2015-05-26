@@ -21,6 +21,5 @@ index_router.register(r'testers', TestersViewSet)
 urlpatterns = [
     url(r'^', include(index_router.urls)),
     url(r'^elec/', include(lab_electronica_router.urls)),
-    url(r'^testers/', include(testers_router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
