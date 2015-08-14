@@ -19,6 +19,7 @@ class DetailCartSerializer(serializers.ModelSerializer):
 class DetailHistorySerializer(serializers.ModelSerializer):
     #detail_history = serializers.HyperlinkedRelatedField(many=True, view_name='DetailHistory-detail', queryset=DetailHistory.objects.all())
     #id_history = serializers.IntegerField()
+    #id_student_fk = serializers.StringRelatedField(queryset=DetailHistory.objects.get(id_student_fk__labs__name='Electronica'))
     class Meta:
         model = DetailHistory
         fields = ('id_history','id_student_fk', 'id_component_fk', 'quantity', 'date_out', 'date_in')
