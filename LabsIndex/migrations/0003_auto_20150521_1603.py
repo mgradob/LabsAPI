@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='student',
             name='last_login',
-            field=models.DateTimeField(null=True, verbose_name='last login', blank=True),
+            field=models.DateTimeField(verbose_name='last login',blank=True),
         ),
     ]

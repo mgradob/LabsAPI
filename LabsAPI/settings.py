@@ -22,6 +22,9 @@ SECRET_KEY = '4c$h)qv&=g$o)yn()p*jw(!$nn^k&2c#-s!d1c%e^-ngqbxf*g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#Defining custom user Model from Student
+AUTH_USER_MODEL = 'LabsIndex.Student'
+
 TEMPLATE_DEBUG = True
 
 # Application definition

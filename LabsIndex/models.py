@@ -15,8 +15,10 @@ class Labs(models.Model):
 
 class StudentManager(BaseUserManager):
     def create_user(self, id_student,
-                    password=None):
+                    password):
         user = self.model(id_student=id_student,)
+        user.set_password(password)
+        user.save(using=self._db)
         return user
 
     def create_superuser(self, id_student,
@@ -40,8 +42,13 @@ class Student(AbstractBaseUser):
 
     REQUIRED_FIELDS = ['name', 'last_name_1', 'id_credential', 'career', 'mail']
 
+    objects = StudentManager()
     def __unicode__(self):
         return self.id_student
+
+    class Meta:
+        app_label = 'LabsIndex'
+        db_table = 'Student'
 
 class AdministratorManager(BaseUserManager):
     def create_admin(self, id_administrator,
