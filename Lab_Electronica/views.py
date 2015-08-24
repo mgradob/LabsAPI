@@ -47,7 +47,7 @@ class DetailHistoryViewSet(viewsets.ModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
     """
-    queryset = DetailHistory.objects.filter(id_student_fk__labs__name='Electronica')
+    queryset = DetailHistory.objects.filter(id_student_fk__labs__name='Electronica').order_by('id_history')
     serializer_class = serializers.DetailHistorySerializer
     filter_class = DetailHistoryFilter
 
