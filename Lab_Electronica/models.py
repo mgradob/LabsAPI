@@ -1,5 +1,7 @@
 from django.db import models
 from LabsIndex.models import Student
+from datetime import datetime
+
 
 class Category(models.Model):
     id_category = models.IntegerField(primary_key=True)
@@ -8,6 +10,7 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class Component(models.Model):
     id_component = models.IntegerField(primary_key=True)
@@ -19,6 +22,7 @@ class Component(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class DetailCart(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_cart')
@@ -32,12 +36,13 @@ class DetailCart(models.Model):
     def __unicode__(self):
         return str(self.id_cart)
 
+
 class DetailHistory(models.Model):
     id_student_fk = models.ForeignKey(Student, related_name='student_history')
     id_component_fk = models.ForeignKey(Component, related_name='component_history')
     quantity = models.IntegerField()
-    date_out = models.DateTimeField()
-    date_in = models.DateTimeField(null=True,blank=True)
+    date_out = models.DateTimeField(default=datetime.now,blank=True, null=True)
+    date_in = models.DateTimeField(null=True, blank=True)
     id_history = models.AutoField(primary_key=True)
 
     def __unicode__(self):
