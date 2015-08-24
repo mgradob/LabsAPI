@@ -7,7 +7,7 @@ from LabsIndex import views as api_views
 lab_electronica_router = routers.DefaultRouter()
 lab_electronica_router.register(r'detailcart', DetailCartViewSet)
 lab_electronica_router.register(r'detailhistory', DetailHistoryViewSet)
-lab_electronica_router.register(r'component', ComponentViewSet)
+lab_electronica_router.register(r'component', ComponentViewSet, base_name='component-view')
 lab_electronica_router.register(r'category', CategoryViewSet)
 
 index_router = routers.DefaultRouter()

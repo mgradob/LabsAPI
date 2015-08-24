@@ -1,7 +1,8 @@
 from Lab_Electronica.models import DetailCart, DetailHistory, Component, Category
-from rest_framework import viewsets, generics
-from Lab_Electronica import serializers
+from rest_framework import viewsets, generics, exceptions
+from Lab_Electronica import serializers, permissions
 import django_filters
+from LabsIndex.models import Administrator, Student
 
 class ComponentFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(name='name', lookup_type='exact')
@@ -58,11 +59,15 @@ class ComponentViewSet(viewsets.ModelViewSet):
     queryset = Component.objects.all()
     serializer_class = serializers.ComponentSerializer
     filter_class = ComponentFilter
+    permission_classes = (permissions.IsRegisteredStudentOrReadOnly,)
 
-class CategoryViewSet(viewsets.ModelViewSet):
+
+
+class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     """
      API endpoint tha allows groups to be viewed or edited.
     """
     queryset = Category.objects.all()
     serializer_class = serializers.CategorySerializer
     filter_class = CategoryFilter
+    permission_classes = (permissions.IsAdminOrReadOnly,)
