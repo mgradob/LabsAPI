@@ -24,4 +24,8 @@ class AuthView(views.APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
-        return Response('Authenticated')
+        content = {
+            'user': unicode(request.user),
+            'auth': unicode(request.auth)
+        }
+        return Response(content)
