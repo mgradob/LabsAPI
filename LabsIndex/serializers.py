@@ -11,7 +11,7 @@ class LabsSerializer(serializers.ModelSerializer):
         fields = ('name', 'link')
 
 class StudentSerializer(serializers.ModelSerializer):
-    labs = serializers.SlugRelatedField(many=True,slug_field='name', queryset=Labs.objects.all())
+    labs = serializers.HyperlinkedRelatedField(many=True, view_name='labs-detail', queryset=Labs.objects.all())
     password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
 
     class Meta:
