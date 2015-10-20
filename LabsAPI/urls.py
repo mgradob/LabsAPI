@@ -3,7 +3,6 @@ from rest_framework import routers
 from Lab_Electronica.views import  DetailCartViewSet, DetailHistoryViewSet, ComponentViewSet, CategoryViewSet
 from BetaTesters.views import TestersViewSet
 from LabsIndex.views import LabsViewSet, StudentViewSet, AdministratorViewSet
-from rest_framework.authtoken import views as api_views
 
 lab_electronica_router = routers.DefaultRouter()
 lab_electronica_router.register(r'detailcart', DetailCartViewSet)
@@ -22,5 +21,5 @@ index_router.register(r'testers', TestersViewSet)
 urlpatterns = [
     url(r'^', include(index_router.urls)),
     url(r'^elec/', include(lab_electronica_router.urls)),
-    url(r'^auth/', api_views.obtain_auth_token),
+    url(r'^auth/', include('djoser.urls.authtoken'))
 ]

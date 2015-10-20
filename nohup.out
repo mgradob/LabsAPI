@@ -1,0 +1,49 @@
+/Library/Python/2.7/site-packages/django_filters/filterset.py:52: RemovedInDjango19Warning: SortedDict is deprecated and will be removed in Django 1.9.
+  return SortedDict(filters)
+
+/Library/Python/2.7/site-packages/django_filters/filterset.py:52: RemovedInDjango19Warning: SortedDict is deprecated and will be removed in Django 1.9.
+  return SortedDict(filters)
+
+/Library/Python/2.7/site-packages/django_filters/filterset.py:78: RemovedInDjango19Warning: SortedDict is deprecated and will be removed in Django 1.9.
+  field_dict = SortedDict()
+
+[20/Oct/2015 19:44:42] "GET /auth/login/ HTTP/1.1" 405 6785
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/js/jquery-1.8.1-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:44:42] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[20/Oct/2015 19:44:48] "POST /auth/login/ HTTP/1.1" 200 6587
+[20/Oct/2015 19:44:53] "GET /auth/login/ HTTP/1.1" 405 6785
+[20/Oct/2015 19:44:56] "GET /auth/ HTTP/1.1" 200 5725
+[20/Oct/2015 19:44:59] "GET /auth/logout/ HTTP/1.1" 403 2899
+[20/Oct/2015 19:45:03] "GET /auth/me/ HTTP/1.1" 403 4126
+[20/Oct/2015 19:45:06] "GET /auth/login/ HTTP/1.1" 405 6785
+[20/Oct/2015 19:45:09] "POST /auth/login/ HTTP/1.1" 200 6587
+[20/Oct/2015 19:45:13] "GET /auth/login/ HTTP/1.1" 405 6785
+[20/Oct/2015 19:45:16] "GET /auth/me/ HTTP/1.1" 403 4126
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/js/jquery-1.8.1-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:16] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:20] "GET /auth/activate/ HTTP/1.1" 405 6780
+[20/Oct/2015 19:45:32] "POST /auth/activate/ HTTP/1.1" 500 134895
+[20/Oct/2015 19:45:40] "POST /auth/activate/ HTTP/1.1" 400 6923
+[20/Oct/2015 19:45:45] "POST /auth/activate/ HTTP/1.1" 500 136538
+[20/Oct/2015 19:45:51] "GET /auth/register/ HTTP/1.1" 405 8179
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/js/jquery-1.8.1-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:51] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[20/Oct/2015 19:45:57] "GET /auth/password/ HTTP/1.1" 403 2915

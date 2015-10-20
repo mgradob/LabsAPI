@@ -19,13 +19,3 @@ class AdministratorViewSet(viewsets.ModelViewSet):
     queryset = Administrator.objects.all()
     serializer_class = serializers.AdministratorSerializer
 
-class AuthView(views.APIView):
-    authentication_classes = (authentication.SessionAuthentication,)
-    permission_classes = (IsAuthenticated,)
-
-    def get(self, request, format=None):
-        content = {
-            'user': unicode(request.user),
-            'auth': unicode(request.auth)
-        }
-        return Response(content)

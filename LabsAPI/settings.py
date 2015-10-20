@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'BetaTesters',
     'LabsIndex',
     'rest_framework.authtoken',
+    'djoser'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,5 +101,6 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     )
 }
