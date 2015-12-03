@@ -37,6 +37,7 @@ class Student(AbstractBaseUser):
     id_credential = models.IntegerField(null=True)
     career = models.CharField(max_length=5)
     mail = models.EmailField()
+    is_admin = models.BooleanField(default=False)
     labs = models.ManyToManyField(Labs)
     USERNAME_FIELD = 'id_student'
 
@@ -75,7 +76,7 @@ class Administrator(AbstractBaseUser):
     USERNAME_FIELD = 'id_administrator'
 
     REQUIRED_FIELDS = ['name', 'last_name_1', 'last_name_2', 'mail']
-    
+
     objects = AdministratorManager()
     def __unicode__(self):
         return self.id_administrator

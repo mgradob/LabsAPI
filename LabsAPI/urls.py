@@ -13,7 +13,6 @@ lab_electronica_router.register(r'category', CategoryViewSet)
 index_router = routers.DefaultRouter()
 index_router.register(r'labs', LabsViewSet)
 index_router.register(r'students', StudentViewSet)
-index_router.register(r'admins', AdministratorViewSet)
 index_router.register(r'testers', TestersViewSet)
 
 # Wire up our API using automatic URL routing.
