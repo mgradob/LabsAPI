@@ -75,6 +75,7 @@ class Administrator(AbstractBaseUser):
     USERNAME_FIELD = 'id_administrator'
 
     REQUIRED_FIELDS = ['name', 'last_name_1', 'last_name_2', 'mail']
-
+    
+    objects = AdministratorManager()
     def __unicode__(self):
         return self.id_administrator

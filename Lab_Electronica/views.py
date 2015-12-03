@@ -1,5 +1,6 @@
 from Lab_Electronica.models import DetailCart, DetailHistory, Component, Category
 from rest_framework import viewsets, generics, exceptions
+from rest_framework import permissions as rest_permissions
 from Lab_Electronica import serializers, permissions
 import django_filters
 
@@ -43,6 +44,7 @@ class DetailCartViewSet(viewsets.ModelViewSet):
     queryset = DetailCart.objects.filter(id_student_fk__labs__name='Electronica')
     serializer_class = serializers.DetailCartSerializer
     filter_class = DetailCartFilter
+    permission_classes = (rest_permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
