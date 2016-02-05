@@ -1,0 +1,11 @@
+Django==1.9.2
+PyYAML==3.11
+argparse==1.2.1
+django-extensions==1.6.1
+django-filter==0.12.0
+django-rest-swagger==0.3.5
+djangorestframework==3.3.2
+djoser==0.4.0
+pytz==2015.7
+six==1.10.0
+wsgiref==0.1.2
