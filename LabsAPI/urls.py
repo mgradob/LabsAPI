@@ -20,5 +20,6 @@ index_router.register(r'testers', TestersViewSet)
 urlpatterns = [
     url(r'^', include(index_router.urls)),
     url(r'^elec/', include(lab_electronica_router.urls)),
-    url(r'^auth/', include('djoser.urls.authtoken'))
+    url(r'^auth/', include('djoser.urls.authtoken')),
+    url(r'^docs/', include('rest_framework_swagger.urls'))
 ]

@@ -43,7 +43,8 @@ INSTALLED_APPS = (
     'BetaTesters',
     'LabsIndex',
     'rest_framework.authtoken',
-    'djoser'
+    'djoser',
+    'rest_framework_swagger'
 )
 
 MIDDLEWARE_CLASSES = (
